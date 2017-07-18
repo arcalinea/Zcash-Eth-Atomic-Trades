@@ -30,7 +30,7 @@ HashLockContract.setProvider(provider);
 var web3 = new Web3(provider);
 
 try{
-    HashLockContract.deployed().then(function(instance){
+    // HashLockContract.deployed().then(function(instance){
 
         /*****************************************************************
          * API
@@ -394,11 +394,11 @@ try{
           });
         });
 
-        app.listen(3000,function(){
-          console.log("http://localhost:3000");
+        app.listen(3000, '127.0.0.1', function(){
+          console.log("http://127.0.0.1:3000");
         });
 
-    });
+    // });
 }catch(e){
     console.log(e);
     console.log("Contract hasn't been deployed to blockchain. Try running truffle migrate.");
